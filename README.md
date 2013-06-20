@@ -21,15 +21,18 @@ Description:
 
 Data and time 
 ===================================
+
 *Get formatted time:*
 
 Return current date and time in your format according
 - *format* defined in http://docs.python.org/2/library/time.html#time.strftime .
 - *offset* (optional) define in format [+-]<number>[mhdw]
+
 --   m - minutes
 --   h - hours
 --   d - days
 --   w - weeks
 
 Example:
+
 | ${necessary_time} | Get Formatted Time | "%Y-%m-%dT%H:%M:%SZ | +40w |
