@@ -17,3 +17,24 @@ Description:
 - c - char
 - w - word, digits and chars
 - * - produce preceding char multiple times
+
+
+Data and time 
+===================================
+*Get formatted time:*
+
+Return current date and time in your format according
+- *format* defined in http://docs.python.org/2/library/time.html#time.strftime .
+- *offset* (optional) define in format [+-]<number>[mhdw]
+--   m - minutes
+--   h - hours
+--   d - days
+--   w - weeks
+
+Example:
+    | ${necessary_time} | Get Formatted Time | | |
+    | ${necessary_time} | Get Formatted Time | %H:%M:%SZ | |
+    | ${necessary_time} | Get Formatted Time | %H:%M:%SZ | -1d |
+    | ${necessary_time} | Get Formatted Time | %Y-%m-%dT | +1h |
+    | ${necessary_time} | Get Formatted Time | %Y-%m-%dT | +360m |
+    | ${necessary_time} | Get Formatted Time | "%Y-%m-%dT%H:%M:%SZ | +40w |
